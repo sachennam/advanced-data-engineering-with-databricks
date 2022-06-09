@@ -185,9 +185,10 @@ parse_table_keys(DA.db_name)
 # COMMAND ----------
 
 # MAGIC %sql
-# MAGIC -- TODO
-# MAGIC <FILL_IN> ${da.db_name}.challenge
-# MAGIC <FILL_IN>
+# MAGIC CREATE TABLE IF NOT EXISTS ${da.db_name}.challenge
+# MAGIC (id int, fname string, lname string, location string)
+# MAGIC COMMENT "Non PII Table"
+# MAGIC TBLPROPERTIES('contains_pii' = False)
 
 # COMMAND ----------
 
